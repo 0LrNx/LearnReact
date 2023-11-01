@@ -14,11 +14,31 @@ function App() {
     setResult("");
   }
 
-
   function Addition() {
     const num1 = parseInt(value1, 10);
     const num2 = parseInt(value2, 10);
     const sum = num1 + num2;
+    setResult(sum);
+  }
+
+  function Substraction() {
+    const num1 = parseInt(value1, 10);
+    const num2 = parseInt(value2, 10);
+    const sum = num1 - num2;
+    setResult(sum);
+  }
+
+  function Division() {
+    const num1 = parseInt(value1, 10);
+    const num2 = parseInt(value2, 10);
+    const sum = num1 / num2;
+    setResult(sum);
+  }
+
+  function Multiplication() {
+    const num1 = parseInt(value1, 10);
+    const num2 = parseInt(value2, 10);
+    const sum = num1 * num2;
     setResult(sum);
   }
 
@@ -31,9 +51,9 @@ function App() {
       </div>
       <div className="calculator-buttons">
         <button type="button" onClick={Addition}>+ Add</button>
-        <button type="button">- Substract</button>
-        <button type="button">/ Divide</button>
-        <button type="button">x Multiply</button>
+        <button type="button" onClick={Substraction}>- Substract</button>
+        <button type="button" onClick={Division}>/ Divide</button>
+        <button type="button" onClick={Multiplication}>x Multiply</button>
       </div>
       <div className="calculator-result-reset">
       <input type="text" id="result" name="result" placeholder="Result" value={result}/>
